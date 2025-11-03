@@ -1,0 +1,101 @@
+/* 전체 페이지 스타일 */
+body {
+    font-family: 'Noto Sans KR', sans-serif; /* 깔끔한 한글 폰트 */
+    background-color: #f4f7f6; /* 부드러운 배경색 */
+    color: #333; /* 기본 글자색 */
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+/* 소개 페이지 전체를 감싸는 흰색 카드 */
+.container {
+    max-width: 800px; /* 최대 넓이 */
+    margin: 20px auto; /* 가운데 정렬 */
+    padding: 30px;
+    background-color: #ffffff; /* 흰색 배경 */
+    border-radius: 12px; /* 모서리를 둥글게 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* 은은한 그림자 */
+}
+
+/* 맨 위 헤더 영역 */
+header {
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #007bff; /* 파란색으로 강조 */
+    margin-bottom: 10px;
+}
+
+.intro {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* 각 섹션 스타일 */
+.section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #007bff; /* 제목 아래 파란색 선 */
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+/* 리스트 스타일 (좋아하는 것 등) */
+ul {
+    list-style-type: none; /* 점 없애기 */
+    padding-left: 0;
+}
+
+li {
+    font-size: 1.05em;
+    margin-bottom: 10px;
+    background-color: #f9f9f9; /* 리스트 항목 배경색 */
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+li strong {
+    color: #0056b3; /* '이름:', '나이:' 등 라벨 색상 */
+    margin-right: 8px;
+}
+
+/* 예시 텍스트 스타일 */
+.example {
+    font-style: italic;
+    color: #777;
+    font-size: 0.95em;
+    border-left: 3px solid #ccc;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+/* 인용구 (한마디!) 스타일 */
+blockquote {
+    font-size: 1.15em;
+    font-weight: bold;
+    color: #007bff;
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f0f8ff; /* 연한 파란색 배경 */
+    border-left: 5px solid #007bff;
+    border-radius: 6px;
+}
+
+/* 꼬리말 */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.95em;
+    color: #888;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}

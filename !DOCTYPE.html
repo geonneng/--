@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주재성 학생 소개 페이지</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+
+    <div class="container">
+        <header>
+            <div class="profile-circle">
+                <div class="profile-emoji">👦</div>
+            </div>
+            <h1 class="animated-title">안녕! 👋</h1>
+            <p class="intro">
+                나는 평산초등학교 5학년 3반(다시마 반) <strong class="highlight">주재성</strong>이야! <br>
+                나를 소개할게!
+            </p>
+        </header>
+
+        <div class="section card">
+            <h2 class="section-title">🙋‍♂️ 나를 알려줄게!</h2>
+            <div class="info-grid">
+                <div class="info-item" data-info="평산초등학교 5학년 3반(다시마 반)의 주재성!">
+                    <div class="info-icon">📝</div>
+                    <div class="info-content">
+                        <strong>이름</strong>
+                        <span>주재성</span>
+                    </div>
+                </div>
+                <div class="info-item" data-info="12살이고 초등학교 5학년이에요!">
+                    <div class="info-icon">🎂</div>
+                    <div class="info-content">
+                        <strong>나이</strong>
+                        <span>12살 (초등학교 5학년)</span>
+                    </div>
+                </div>
+                <div class="info-item" data-info="혈액형은 O형이에요!">
+                    <div class="info-icon">🩸</div>
+                    <div class="info-content">
+                        <strong>혈액형</strong>
+                        <span>O형</span>
+                    </div>
+                </div>
+                <div class="info-item" data-info="TMI: 승완이랑 생일 같음">
+                    <div class="info-icon">🎁</div>
+                    <div class="info-content">
+                        <strong>생일</strong>
+                        <span>8월 13일</span>
+                    </div>
+                </div>
+                <div class="info-item" data-info="게임과 가족, 친구들을 정말 좋아해요!">
+                    <div class="info-icon">❤️</div>
+                    <div class="info-content">
+                        <strong>좋아하는 것</strong>
+                        <span>게임 🎮, 가족 👨‍👩‍👦‍👦, 친구 👫</span>
+                    </div>
+                </div>
+                <div class="info-item" data-info="사회 과목을 싫어해요...">
+                    <div class="info-icon">😟</div>
+                    <div class="info-content">
+                        <strong>싫어하는 것</strong>
+                        <span>사회 📖</span>
+                    </div>
+                </div>
+            </div>
+            <div id="info-description" class="info-description"></div>
+        </div>
+
+        <div class="section card">
+            <h2 class="section-title">💖 학교에서 보통하는 일은...</h2>
+            <div class="hobby-content">
+                <p>저는 교실에서 놀거나 숙제하기, 피구하기를 하는 것을 좋아해요!</p>
+                <div class="hobby-examples">
+                    <span class="hobby-tag" data-info="보드게임을 하거나 친구들 웃기기">🎮 놀기</span>
+                    <span class="hobby-tag" data-info="영어 숙제를 하기">✏️ 숙제하기</span>
+                    <span class="hobby-tag" data-info="탱탱한 볼로 공 잡기 놀기를 하거나 피하기 놀이를 한다">⚾ 피구</span>
+                </div>
+                <div id="hobby-info" class="hobby-info"></div>
+            </div>
+        </div>
+
+        <div class="section card">
+            <h2 class="section-title">🚀 나의 장래희망은...</h2>
+            <div class="dream-content">
+                <div class="dream-icon">🎮</div>
+                <p>저는 인플루언서들이 영상을 올리며 하는 게임 프로그래머가 되고 싶어요!</p>
+                <p style="margin-top: 20px; font-size: 1.1em; color: #666;">많은 사람들이 좋아하는 게임을 만들어서 유명한 인플루언서들이 플레이하는 멋진 게임 개발자가 되고 싶어요! 🚀</p>
+            </div>
+        </div>
+
+        <div class="section card special-card">
+            <h2 class="section-title">📬 하고 싶은 말!</h2>
+            <blockquote class="quote">
+                <div class="quote-icon">💬</div>
+                <p>다들 화이팅! 선생님도 화이팅!</p>
+            </blockquote>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <p>감사합니다! 😊</p>
+                <div class="footer-icons">
+                    <span class="footer-icon">✨</span>
+                    <span class="footer-icon">🌟</span>
+                    <span class="footer-icon">✨</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // 간단한 인터랙티브 효과
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // 취미 태그 클릭 이벤트
+        document.querySelectorAll('.hobby-tag').forEach(tag => {
+            tag.addEventListener('click', function() {
+                const info = this.getAttribute('data-info');
+                const infoDiv = document.getElementById('hobby-info');
+                
+                // 기존 내용 지우기
+                infoDiv.innerHTML = '';
+                
+                // 새 설명 추가
+                if (info) {
+                    const infoText = document.createElement('p');
+                    infoText.innerHTML = `<strong>${this.textContent}</strong> 💡<br><span style="color: #666; font-size: 0.95em;">${info}</span>`;
+                    infoText.style.cssText = 'margin-top: 20px; padding: 15px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%); border-radius: 10px; border-left: 4px solid #667eea; animation: fadeIn 0.3s ease-out;';
+                    infoDiv.appendChild(infoText);
+                }
+            });
+        });
+
+        // 나를 알려줄게! 섹션 클릭 이벤트
+        document.querySelectorAll('.info-item').forEach(item => {
+            item.style.cursor = 'pointer';
+            item.addEventListener('click', function() {
+                const info = this.getAttribute('data-info');
+                const infoDescDiv = document.getElementById('info-description');
+                
+                // 기존 내용 지우기
+                infoDescDiv.innerHTML = '';
+                
+                // 새 설명 추가
+                if (info) {
+                    const infoText = document.createElement('p');
+                    infoText.innerHTML = info;
+                    infoText.style.cssText = 'margin-top: 20px; padding: 20px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%); border-radius: 15px; border: 2px solid rgba(102, 126, 234, 0.3); font-size: 1.1em; color: #333; font-weight: 600; text-align: center; animation: fadeIn 0.3s ease-out;';
+                    infoDescDiv.appendChild(infoText);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
