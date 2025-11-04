@@ -87,14 +87,26 @@
             });
         });
 
+        // 모든 description div 참조
+        const foodDescDiv = document.getElementById('food-description');
+        const colorDescDiv = document.getElementById('color-description');
+        const subjectDescDiv = document.getElementById('subject-description');
+        const songDescDiv = document.getElementById('song-description');
+
+        // 모든 설명 지우는 함수
+        function clearAllDescriptions() {
+            foodDescDiv.innerHTML = '';
+            colorDescDiv.innerHTML = '';
+            subjectDescDiv.innerHTML = '';
+            songDescDiv.innerHTML = '';
+        }
+
         // 좋아하는 음식 클릭 이벤트
         const foodItem = document.getElementById('food-item');
-        const foodDescDiv = document.getElementById('food-description');
-        
         foodItem.style.cursor = 'pointer';
         foodItem.addEventListener('click', function() {
-            // 기존 내용 지우기
-            foodDescDiv.innerHTML = '';
+            // 모든 설명 지우기
+            clearAllDescriptions();
             
             // 치킨 표시
             const foodText = document.createElement('p');
@@ -105,12 +117,10 @@
 
         // 좋아하는 색깔 클릭 이벤트
         const colorItem = document.getElementById('color-item');
-        const colorDescDiv = document.getElementById('color-description');
-        
         colorItem.style.cursor = 'pointer';
         colorItem.addEventListener('click', function() {
-            // 기존 내용 지우기
-            colorDescDiv.innerHTML = '';
+            // 모든 설명 지우기
+            clearAllDescriptions();
             
             // 파란색 계열 표시
             const colorText = document.createElement('p');
@@ -121,12 +131,10 @@
 
         // 좋아하는 과목 클릭 이벤트
         const subjectItem = document.getElementById('subject-item');
-        const subjectDescDiv = document.getElementById('subject-description');
-        
         subjectItem.style.cursor = 'pointer';
         subjectItem.addEventListener('click', function() {
-            // 기존 내용 지우기
-            subjectDescDiv.innerHTML = '';
+            // 모든 설명 지우기
+            clearAllDescriptions();
             
             // 체육,영어,도덕 표시
             const subjectText = document.createElement('p');
@@ -137,12 +145,10 @@
 
         // 좋아하는 노래 클릭 이벤트
         const songItem = document.getElementById('song-item');
-        const songDescDiv = document.getElementById('song-description');
-        
         songItem.style.cursor = 'pointer';
         songItem.addEventListener('click', function() {
-            // 기존 내용 지우기
-            songDescDiv.innerHTML = '';
+            // 모든 설명 지우기
+            clearAllDescriptions();
             
             // 조선왕 외우기,1차 고려거란전쟁,고려왕 외우기 표시
             const songText = document.createElement('p');
