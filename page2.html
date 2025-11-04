@@ -57,11 +57,19 @@
                         <span>클릭해봐</span>
                     </div>
                 </div>
+                <div class="info-item" id="animal-item">
+                    <div class="info-icon">🐱</div>
+                    <div class="info-content">
+                        <strong>좋아하는 동물</strong>
+                        <span>클릭해봐</span>
+                    </div>
+                </div>
             </div>
             <div id="food-description" class="info-description"></div>
             <div id="color-description" class="info-description"></div>
             <div id="subject-description" class="info-description"></div>
             <div id="song-description" class="info-description"></div>
+            <div id="animal-description" class="info-description"></div>
         </div>
 
         <footer>
@@ -92,6 +100,7 @@
         const colorDescDiv = document.getElementById('color-description');
         const subjectDescDiv = document.getElementById('subject-description');
         const songDescDiv = document.getElementById('song-description');
+        const animalDescDiv = document.getElementById('animal-description');
 
         // 모든 설명 지우는 함수
         function clearAllDescriptions() {
@@ -99,6 +108,7 @@
             colorDescDiv.innerHTML = '';
             subjectDescDiv.innerHTML = '';
             songDescDiv.innerHTML = '';
+            animalDescDiv.innerHTML = '';
         }
 
         // 좋아하는 음식 클릭 이벤트
