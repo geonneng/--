@@ -82,7 +82,10 @@
 
         <footer>
             <div class="footer-content">
-                <p id="prev-page-link" style="cursor: pointer; transition: all 0.3s ease; padding: 10px 20px; border-radius: 10px; display: inline-block;">⬅️ 이전 페이지로</p>
+                <div style="display: flex; gap: 20px; align-items: center; justify-content: center; flex-wrap: wrap;">
+                    <p id="prev-page-link" style="cursor: pointer; transition: all 0.3s ease; padding: 10px 20px; border-radius: 10px; display: inline-block; margin: 0;">⬅️ 이전 페이지로</p>
+                    <p id="next-page-link" style="cursor: pointer; transition: all 0.3s ease; padding: 10px 20px; border-radius: 10px; display: inline-block; margin: 0;">다음 페이지로 ➡️</p>
+                </div>
                 <div class="footer-icons">
                     <span class="footer-icon">✨</span>
                     <span class="footer-icon">🌟</span>
@@ -215,6 +218,20 @@
             this.style.transform = 'scale(1.05)';
         });
         prevPageLink.addEventListener('mouseleave', function() {
+            this.style.background = 'transparent';
+            this.style.transform = 'scale(1)';
+        });
+
+        // 다음 페이지로 이동
+        const nextPageLink = document.getElementById('next-page-link');
+        nextPageLink.addEventListener('click', function() {
+            window.location.href = 'page3.html';
+        });
+        nextPageLink.addEventListener('mouseenter', function() {
+            this.style.background = 'linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%)';
+            this.style.transform = 'scale(1.05)';
+        });
+        nextPageLink.addEventListener('mouseleave', function() {
             this.style.background = 'transparent';
             this.style.transform = 'scale(1)';
         });
