@@ -50,10 +50,18 @@
                         <span>클릭해봐</span>
                     </div>
                 </div>
+                <div class="info-item" id="song-item">
+                    <div class="info-icon">🎵</div>
+                    <div class="info-content">
+                        <strong>좋아하는 노래</strong>
+                        <span>클릭해봐</span>
+                    </div>
+                </div>
             </div>
             <div id="food-description" class="info-description"></div>
             <div id="color-description" class="info-description"></div>
             <div id="subject-description" class="info-description"></div>
+            <div id="song-description" class="info-description"></div>
         </div>
 
         <footer>
@@ -125,6 +133,22 @@
             subjectText.innerHTML = '체육,영어';
             subjectText.style.cssText = 'margin-top: 20px; padding: 20px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%); border-radius: 15px; border: 2px solid rgba(102, 126, 234, 0.3); font-size: 1.1em; color: #333; font-weight: 600; text-align: center; animation: fadeIn 0.3s ease-out;';
             subjectDescDiv.appendChild(subjectText);
+        });
+
+        // 좋아하는 노래 클릭 이벤트
+        const songItem = document.getElementById('song-item');
+        const songDescDiv = document.getElementById('song-description');
+        
+        songItem.style.cursor = 'pointer';
+        songItem.addEventListener('click', function() {
+            // 기존 내용 지우기
+            songDescDiv.innerHTML = '';
+            
+            // 조선왕 외우기,1차 고려거란전쟁,고려왕 외우기 표시
+            const songText = document.createElement('p');
+            songText.innerHTML = '조선왕 외우기,1차 고려거란전쟁,고려왕 외우기';
+            songText.style.cssText = 'margin-top: 20px; padding: 20px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%); border-radius: 15px; border: 2px solid rgba(102, 126, 234, 0.3); font-size: 1.1em; color: #333; font-weight: 600; text-align: center; animation: fadeIn 0.3s ease-out;';
+            songDescDiv.appendChild(songText);
         });
 
         // 이전 페이지로 이동
