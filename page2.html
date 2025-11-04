@@ -167,6 +167,20 @@
             songDescDiv.appendChild(songText);
         });
 
+        // 좋아하는 동물 클릭 이벤트
+        const animalItem = document.getElementById('animal-item');
+        animalItem.style.cursor = 'pointer';
+        animalItem.addEventListener('click', function() {
+            // 모든 설명 지우기
+            clearAllDescriptions();
+            
+            // 고양이 표시
+            const animalText = document.createElement('p');
+            animalText.innerHTML = '고양이';
+            animalText.style.cssText = 'margin-top: 20px; padding: 20px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%); border-radius: 15px; border: 2px solid rgba(102, 126, 234, 0.3); font-size: 1.1em; color: #333; font-weight: 600; text-align: center; animation: fadeIn 0.3s ease-out;';
+            animalDescDiv.appendChild(animalText);
+        });
+
         // 이전 페이지로 이동
         const prevPageLink = document.getElementById('prev-page-link');
         prevPageLink.addEventListener('click', function() {
