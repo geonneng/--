@@ -64,12 +64,20 @@
                         <span>클릭해봐</span>
                     </div>
                 </div>
+                <div class="info-item" id="bird-item">
+                    <div class="info-icon" style="background-image: url('물총새.webp'); background-size: cover; background-position: center; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;"></div>
+                    <div class="info-content">
+                        <strong>좋아하는 새</strong>
+                        <span>클릭해봐</span>
+                    </div>
+                </div>
             </div>
             <div id="food-description" class="info-description"></div>
             <div id="color-description" class="info-description"></div>
             <div id="subject-description" class="info-description"></div>
             <div id="song-description" class="info-description"></div>
             <div id="animal-description" class="info-description"></div>
+            <div id="bird-description" class="info-description"></div>
         </div>
 
         <footer>
@@ -101,6 +109,7 @@
         const subjectDescDiv = document.getElementById('subject-description');
         const songDescDiv = document.getElementById('song-description');
         const animalDescDiv = document.getElementById('animal-description');
+        const birdDescDiv = document.getElementById('bird-description');
 
         // 모든 설명 지우는 함수
         function clearAllDescriptions() {
@@ -109,6 +118,7 @@
             subjectDescDiv.innerHTML = '';
             songDescDiv.innerHTML = '';
             animalDescDiv.innerHTML = '';
+            birdDescDiv.innerHTML = '';
         }
 
         // 좋아하는 음식 클릭 이벤트
@@ -179,6 +189,20 @@
             animalText.innerHTML = '고양이';
             animalText.style.cssText = 'margin-top: 20px; padding: 20px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%); border-radius: 15px; border: 2px solid rgba(102, 126, 234, 0.3); font-size: 1.1em; color: #333; font-weight: 600; text-align: center; animation: fadeIn 0.3s ease-out;';
             animalDescDiv.appendChild(animalText);
+        });
+
+        // 좋아하는 새 클릭 이벤트
+        const birdItem = document.getElementById('bird-item');
+        birdItem.style.cursor = 'pointer';
+        birdItem.addEventListener('click', function() {
+            // 모든 설명 지우기
+            clearAllDescriptions();
+            
+            // 물총새 표시
+            const birdText = document.createElement('p');
+            birdText.innerHTML = '물총새';
+            birdText.style.cssText = 'margin-top: 20px; padding: 20px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%); border-radius: 15px; border: 2px solid rgba(102, 126, 234, 0.3); font-size: 1.1em; color: #333; font-weight: 600; text-align: center; animation: fadeIn 0.3s ease-out;';
+            birdDescDiv.appendChild(birdText);
         });
 
         // 이전 페이지로 이동
