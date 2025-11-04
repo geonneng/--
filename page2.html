@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주재성 학생 소개 페이지 - 2페이지</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+
+    <div class="container">
+        <header>
+            <div class="profile-circle">
+                <div class="profile-emoji">👦</div>
+            </div>
+            <h1 class="animated-title">안녕! 👋</h1>
+            <p class="intro">
+                나는 평산초등학교 5학년 3반(다시마 반) <strong class="highlight">주재성</strong>이야! <br>
+                페이지 2에 오신 것을 환영해요!
+            </p>
+        </header>
+
+        <div class="section card">
+            <h2 class="section-title">📖 추가 정보</h2>
+            <p style="font-size: 1.2em; text-align: center; color: #555;">
+                더 많은 정보를 추가할 수 있는 페이지입니다!
+            </p>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <p id="prev-page-link" style="cursor: pointer; transition: all 0.3s ease; padding: 10px 20px; border-radius: 10px; display: inline-block;">⬅️ 이전 페이지로</p>
+                <div class="footer-icons">
+                    <span class="footer-icon">✨</span>
+                    <span class="footer-icon">🌟</span>
+                    <span class="footer-icon">✨</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // 간단한 인터랙티브 효과
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // 이전 페이지로 이동
+        const prevPageLink = document.getElementById('prev-page-link');
+        prevPageLink.addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+        prevPageLink.addEventListener('mouseenter', function() {
+            this.style.background = 'linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%)';
+            this.style.transform = 'scale(1.05)';
+        });
+        prevPageLink.addEventListener('mouseleave', function() {
+            this.style.background = 'transparent';
+            this.style.transform = 'scale(1)';
+        });
+    </script>
+</body>
+</html>
+
