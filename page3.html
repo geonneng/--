@@ -36,8 +36,16 @@
                         <span>클릭해봐</span>
                     </div>
                 </div>
+                <div class="info-item" id="motto-item">
+                    <div class="info-icon">💡</div>
+                    <div class="info-content">
+                        <strong>교훈</strong>
+                        <span>클릭해봐</span>
+                    </div>
+                </div>
             </div>
             <div id="origin-description" class="info-description"></div>
+            <div id="motto-description" class="info-description"></div>
         </div>
 
         <footer>
@@ -65,20 +73,42 @@
             });
         });
 
+        // 모든 description div 참조
+        const originDescDiv = document.getElementById('origin-description');
+        const mottoDescDiv = document.getElementById('motto-description');
+
+        // 모든 설명 지우는 함수
+        function clearAllDescriptions() {
+            originDescDiv.innerHTML = '';
+            mottoDescDiv.innerHTML = '';
+        }
+
         // 다시마 반의 유래 클릭 이벤트
         const originItem = document.getElementById('origin-item');
-        const originDescDiv = document.getElementById('origin-description');
-        
         originItem.style.cursor = 'pointer';
         originItem.addEventListener('click', function() {
-            // 기존 내용 지우기
-            originDescDiv.innerHTML = '';
+            // 모든 설명 지우기
+            clearAllDescriptions();
             
             // 설명 표시
             const originText = document.createElement('p');
             originText.innerHTML = '우리반이 "다" 반이였기 때문에 "다"의 앞 글자를 따서 다시마,다시다가 나왔다.';
             originText.style.cssText = 'margin-top: 20px; padding: 20px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%); border-radius: 15px; border: 2px solid rgba(102, 126, 234, 0.3); font-size: 1.1em; color: #333; font-weight: 600; text-align: center; animation: fadeIn 0.3s ease-out;';
             originDescDiv.appendChild(originText);
+        });
+
+        // 교훈 클릭 이벤트
+        const mottoItem = document.getElementById('motto-item');
+        mottoItem.style.cursor = 'pointer';
+        mottoItem.addEventListener('click', function() {
+            // 모든 설명 지우기
+            clearAllDescriptions();
+            
+            // 바다처럼 넓은 마음을 가지자 표시
+            const mottoText = document.createElement('p');
+            mottoText.innerHTML = '바다처럼 넓은 마음을 가지자';
+            mottoText.style.cssText = 'margin-top: 20px; padding: 20px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%); border-radius: 15px; border: 2px solid rgba(102, 126, 234, 0.3); font-size: 1.1em; color: #333; font-weight: 600; text-align: center; animation: fadeIn 0.3s ease-out;';
+            mottoDescDiv.appendChild(mottoText);
         });
 
         // 이전 페이지로 이동
