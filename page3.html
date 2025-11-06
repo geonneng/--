@@ -85,6 +85,9 @@
                 <div style="display: flex; gap: 20px; align-items: center; justify-content: center; flex-wrap: wrap;">
                     <p id="prev-page-link" style="cursor: pointer; transition: all 0.3s ease; padding: 10px 20px; border-radius: 10px; display: inline-block; margin: 0;">⬅️ 이전 페이지로</p>
                 </div>
+                <div style="display: flex; gap: 20px; align-items: center; justify-content: center; flex-wrap: wrap; margin-top: 10px;">
+                    <p id="first-page-link" style="cursor: pointer; transition: all 0.3s ease; padding: 10px 20px; border-radius: 10px; display: inline-block; margin: 0;">1 페이지로</p>
+                </div>
                 <p style="font-size: 1.2em; color: #555; font-weight: 600; margin-top: 15px; text-align: center;">끝! 봐줘서 고마워! 😊</p>
                 <div class="footer-icons">
                     <span class="footer-icon">✨</span>
@@ -218,6 +221,20 @@
             this.style.transform = 'scale(1.05)';
         });
         prevPageLink.addEventListener('mouseleave', function() {
+            this.style.background = 'transparent';
+            this.style.transform = 'scale(1)';
+        });
+
+        // 1 페이지로 이동
+        const firstPageLink = document.getElementById('first-page-link');
+        firstPageLink.addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+        firstPageLink.addEventListener('mouseenter', function() {
+            this.style.background = 'linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%)';
+            this.style.transform = 'scale(1.05)';
+        });
+        firstPageLink.addEventListener('mouseleave', function() {
             this.style.background = 'transparent';
             this.style.transform = 'scale(1)';
         });
